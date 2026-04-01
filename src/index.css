@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  /* Color Palette - Cyber / Data Visual Theme */
+  --bg-primary: #030308;
+  --bg-secondary: #0A0A14;
+  --accent-primary: #7000FF; /* Electric Indigo */
+  --accent-secondary: #00F2FF; /* Cyan */
+  --accent-tertiary: #FF00E5; /* Shocking Pink */
+  
+  --text-main: #E2E8F0;
+  --text-dim: #94A3B8;
+  
+  /* Glassmorphism System */
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-blur: blur(12px);
+  
+  /* Layout */
+  --sidebar-width: 320px;
+  --header-height: 64px;
+  --panel-radius: 12px;
+  
+  /* Shadows */
+  --shadow-glow: 0 0 20px rgba(112, 0, 255, 0.2);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  overflow: hidden; /* Canvas handled scroll/pan */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Glass UI Utility */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--panel-radius);
+}
+
+/* Button & Interactive */
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* Modern Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--glass-border);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-primary);
+}
+
+/* Global Layout Grid */
+#root {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}

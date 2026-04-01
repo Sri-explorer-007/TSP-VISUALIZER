@@ -1,0 +1,5 @@
+﻿src/App.tsx(1,17): error TS6133: 'useMemo' is declared but its value is never read.
+src/App.tsx(4,43): error TS6133: 'Plus' is declared but its value is never read.
+src/components/CityCanvas.tsx(3,10): error TS1484: 'City' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/CityCanvas.tsx(3,16): error TS1484: 'Tour' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/CityCanvas.tsx(13,68): error TS6133: 'onCityClick' is declared but its value is never read.
